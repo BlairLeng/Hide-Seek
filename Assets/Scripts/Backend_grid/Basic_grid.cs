@@ -1,10 +1,8 @@
 using System;
-public class Basic{
+public class Basic_grid{
     int pos_x;
     int pos_y;
 
-    // type tells if can be collided or not
-    int obj_type;
     public int pos_x{
         get{
             return pos_x;
@@ -20,15 +18,6 @@ public class Basic{
         }
         set{
             pos_y = value;
-        }
-    }
-
-    public int type{
-        get{
-            return obj_type;
-        }
-        set{
-            obj_type = value;
         }
     }
 }

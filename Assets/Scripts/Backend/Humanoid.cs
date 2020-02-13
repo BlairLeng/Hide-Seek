@@ -1,10 +1,12 @@
 using System;
-public class Basic{
+
+public class Humanoid{
     int pos_x;
     int pos_y;
 
+    double speed;
+
     // type tells if can be collided or not
-    int obj_type;
     public int pos_x{
         get{
             return pos_x;
@@ -13,7 +15,6 @@ public class Basic{
             pos_x = value;
         }
     }
-
     public int pos_y{
         get{
             return pos_y;
@@ -23,12 +24,13 @@ public class Basic{
         }
     }
 
-    public int type{
+    public double speed{
         get{
-            return obj_type;
+            return speed;
         }
         set{
-            obj_type = value;
+            speed = value;
         }
     }
+
 }
