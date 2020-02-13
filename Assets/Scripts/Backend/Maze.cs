@@ -16,6 +16,5 @@ public class Maze{
     public void setGrid(int x, int y, int type){
         this.grids[y,x] = type;
     }
-
-
+    
 }
