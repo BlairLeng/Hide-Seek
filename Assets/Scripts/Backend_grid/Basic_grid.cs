@@ -1,23 +1,15 @@
 using System;
 public class Basic_grid{
-    int pos_x;
-    int pos_y;
+    protected int y;
+    protected int x;
 
-    public int pos_x{
-        get{
-            return pos_x;
-        }
-        set{
-            pos_x = value;
-        }
+    public Basic_grid(){
+        this.y = 0;
+        this.x = 0;
     }
 
-    public int pos_y{
-        get{
-            return pos_y;
-        }
-        set{
-            pos_y = value;
-        }
+    protected void setPosition(int x, int y){
+        this.x = x;
+        this.y = y;
     }
 }

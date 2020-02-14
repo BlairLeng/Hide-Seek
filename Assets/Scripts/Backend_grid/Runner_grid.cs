@@ -12,7 +12,7 @@ public class Runner_grid{
         this.y = y;
     }
     
-    public move(string direction){
+    public void move(string direction){
         if (direction == "left"){
             moveLeft();
         }
@@ -27,16 +27,16 @@ public class Runner_grid{
         }
     }
 
-    private moveLeft(){
+    private void moveLeft(){
         this.x -= 1;
     }
-    private moveRight(){
+    private void moveRight(){
         this.x += 1;
     }
-    private moveUp(){
+    private void moveUp(){
         this.y += 1;
     }
-    private moveDown(){
+    private void moveDown(){
         this.y -= 1;
     }
 }
