@@ -2,20 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Models : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public Maze_grid maze = new Maze_grid(10, 10);
-    public Wall_grid[] walls = new Wall_grid[20];
+namespace Test{
 
-    public void addWalls()
+    class Model
     {
-        for (int i = 0; i < 4; i++)
+        private Maze_grid maze = new Maze_grid(10,10);
+        public Maze_grid Maze
         {
-            for (int j = 0; j < 4; j++)
+            get
             {
-                maze.setWall(i, j);
+                return maze;
             }
+        }
+
+        public Model(){
+            maze.addWalls();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

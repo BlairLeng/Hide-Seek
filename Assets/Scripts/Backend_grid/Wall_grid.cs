@@ -8,5 +8,8 @@ public class Wall_grid: Basic_grid{
     public Wall_grid(int x, int y){
         setPosition(x, y);
     }
+    public override string ToString(){
+        return "this is a wall";
+    }
     
 }

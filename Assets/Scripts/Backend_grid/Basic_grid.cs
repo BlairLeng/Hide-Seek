@@ -12,4 +12,9 @@ public class Basic_grid{
         this.x = x;
         this.y = y;
     }
+
+    public virtual string ToString()
+    {
+        return "basic";
+    }
 }
