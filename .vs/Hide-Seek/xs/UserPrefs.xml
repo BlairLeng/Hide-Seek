@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{3D2612B6-3FCA-8556-9861-984C1DAD7F8C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Frontend/GridManger.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Frontend/controller.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/Frontend/GridManger.cs" Line="16" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hide-Seek" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3b5cdd5b-3ba0-4c1f-b0ca-d002be979592" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
