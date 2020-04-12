@@ -12,15 +12,15 @@ public class map: MonoBehaviour
 
     public int width;
     public int height;
-    public List<int> grids = new List<int>();
+    public List<gridData> grids = new List<gridData>();
     
     //因为2d的list在c#里面没办法jsonify，而且我不想去改源码。。。所以就变成了1d的list
     //需要自己去做一下分割
     // 0 代表可以走的位置
-    // -1 代表分割
     // 1 代表墙
     // 2 代表人
     // 3 代表抓人的人
+    // -1 代表分割
 
     public map(int width, int height)
     {
@@ -30,9 +30,11 @@ public class map: MonoBehaviour
         {
             for (int i = 0; i < height; i++)
             {
-                this.grids.Add(0);
+                gridData empty = new gridData(i,j);
+                this.grids.Add(empty);
             }
-            this.grids.Add(-1);
+            gridData separate = new gridData(-1,-1,-1,-1,this.width,this.height);
+            this.grids.Add(separate);
         }
     }
 
