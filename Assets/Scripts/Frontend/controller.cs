@@ -7,24 +7,16 @@ namespace Test{
 
     public class controller : MonoBehaviour
     {
-        // public static void function(){
-        //     Model m = new Model();
-        //     Maze_grid maze = m.Maze;
-        // }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            Debug.Log("here");
-            Model m = new Model();
-            Maze_grid maze = m.Maze;
-            Debug.Log(maze.ToString());
+        public string json = "";
+        void Start(){
+            map map = new map(10,10);
+            json = JsonUtility.ToJson(map);
+            Debug.Log(json);
         }
 
-        // Update is called once per frame
         void Update()
         {
-
+            view.receiver(json);
         }
     }
 }

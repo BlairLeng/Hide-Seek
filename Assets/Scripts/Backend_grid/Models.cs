@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Test{
 
+    [System.Serializable]
     class Model
     {
-        private Maze_grid maze = new Maze_grid(10,10);
+        public Maze_grid maze = new Maze_grid(10,10);
         public Maze_grid Maze
         {
             get
@@ -14,20 +15,8 @@ namespace Test{
                 return maze;
             }
         }
-
         public Model(){
-            maze.addWalls();
+            maze.addWalls(10, 10);
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-

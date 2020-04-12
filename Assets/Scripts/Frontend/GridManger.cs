@@ -24,7 +24,6 @@ public class GridManger : MonoBehaviour
                 SpawnTile(i, j, 1);
             }
         }
-
     }
 
     // Update is called once per frame
