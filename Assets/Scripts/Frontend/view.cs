@@ -16,11 +16,12 @@
         {
             MyClass get_grid = JsonUtility.FromJson<MyClass>(msg);
 
-            Debug.Log(get_grid.width);
-            Debug.Log(get_grid.grids);
-            
-      
-            
+            Debug.Log(msg);
+            Debug.Log(get_grid.grids[0].x);
+            Debug.Log(get_grid.grids[1].x);
+
+
+
 
             //Debug.Log(msg[0]);
             return;
@@ -41,7 +42,7 @@
         {
             public int width;
             public int height;
-            public int[] grids;
+            public List<gridData> grids;
         }
 
 
