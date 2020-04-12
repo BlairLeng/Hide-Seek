@@ -29,19 +29,72 @@ public class gridData: basic
     public void c_move(string direction){
         // 可以设置是否可以移动的判断条件
         // 如果是runner或者chaser允许移动
-        if (type == 2 || type == 3){
+        int isEmpty = this.accessible_directions.Count;
+        if ((type == 2 || type == 3) && isEmpty != 0 && this.accessible_directions.Contains(direction)){
             move(direction);
         }
         return;
     }
 
     private void move(string direction){
-
+        if (direction == "east"){
+            this.x += 1;
+        }
+        else if (direction == "west"){
+            this.x -= 1;
+        }
+        else if (direction == "up"){
+            this.y -= 1;
+        }
+        else if (direction == "down"){
+            this.y += 1;
+        }
     }
 
     private void checkAccessbility(){
-        if (this.x == this.map_height){
-            
+        //四角
+        if (this.x == this.map_width && this.y == this.map_height){
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("up");
+        }
+        if (this.x == this.map_width && this.y == 0){
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("down");
+        }
+        if (this.x == 0 && this.y == 0){
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("down");
+        }
+        if (this.x == 0 && this.y == this.map_height){
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("up");
+        }
+        //四边
+        else if(this.y == 0 && this.x != 0  && this.x != this.map_width){
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("down");
+        }
+        else if(this.y == this.map_height && this.x != 0  && this.x != this.map_width){
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("up");
+        }
+        else if(this.x == this.map_width && this.y != this.map_height && this.y != this.map_height){
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("up");
+            this.accessible_directions.Add("down");
+        }
+        else if(this.x == 0 && this.y != this.map_height && this.y != this.map_height){
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("up");
+            this.accessible_directions.Add("down");
+        }
+        else{
+            this.accessible_directions.Add("right");
+            this.accessible_directions.Add("left");
+            this.accessible_directions.Add("up");
+            this.accessible_directions.Add("down");
         }
     }
 }

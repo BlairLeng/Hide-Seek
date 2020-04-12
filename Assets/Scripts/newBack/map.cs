@@ -20,7 +20,6 @@ public class map: MonoBehaviour
     // 1 代表墙
     // 2 代表人
     // 3 代表抓人的人
-    // -1 代表分割
 
     public map(int width, int height)
     {
@@ -33,8 +32,6 @@ public class map: MonoBehaviour
                 gridData empty = new gridData(i,j);
                 this.grids.Add(empty);
             }
-            gridData separate = new gridData(-1,-1,-1,-1,this.width,this.height);
-            this.grids.Add(separate);
         }
     }
 
