@@ -34,10 +34,11 @@ public class GridManger : MonoBehaviour
     }
 
     // get x y and spwan the tile
-    public void SpawnTile(int x,int y,int Value)
+    public void SpawnTile(int x,int y,int Value,int Height)
     {
-        Sprite sp = Resources.Load<Sprite>("Sprites/Square");
-        GameObject g = new GameObject("X" + x+ "Y"+y);
+        //Sprite sp = Resources.Load<Sprite>("Sprites/Square");
+        Sprite sp = Resources.Load<Sprite>("Sprites/ppp");
+        GameObject g = new GameObject("X" + x+ "Y"+(Height - y));
         g.transform.position = new Vector3(x-(Horizontal - 0.5f),y-(Vertical - 0.5f));
         var s = g.AddComponent<SpriteRenderer>(); 
         //Debug.Log("sprite should be "+ sp);
@@ -49,6 +50,10 @@ public class GridManger : MonoBehaviour
         else if (Value == 1)
         {
             s.color = new Color(0.0f, 0.0f, 0.0f);
+        }
+        else if (Value == 2)
+        {
+            s.color = new Color(0.0f, 0.0f, 1.0f);
         }
 
     }

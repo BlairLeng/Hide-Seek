@@ -24,13 +24,14 @@
 
             GameObject gmob = new GameObject();
             GridManger gm = gmob.AddComponent<GridManger>();
-            gm.SpawnTile(get_grid.grids[0].x, get_grid.grids[0].y, get_grid.grids[0].type);
+            //gm.SpawnTile(get_grid.grids[0].x, get_grid.grids[0].y, get_grid.grids[0].type);
             int len = get_grid.width * get_grid.height;
-            Random random = new Random();
+            int rev = get_grid.height - 1;
             int rd = Random.Range(0,2);
             for (int i = 0; i < len; i++)
             {
-                gm.SpawnTile(get_grid.grids[i].x, get_grid.grids[i].y, Random.Range(0, 2));
+                Debug.Log("revese y value is"+Mathf.Abs(rev - i));
+                gm.SpawnTile(get_grid.grids[i].x, Mathf.Abs(rev - get_grid.grids[i].y), get_grid.grids[i].type, rev);
             }
 
 
