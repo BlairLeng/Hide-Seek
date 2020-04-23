@@ -37,10 +37,10 @@ public class gridData: basic
     }
 
     private void move(string direction){
-        if (direction == "east"){
+        if (direction == "right"){
             this.x += 1;
         }
-        else if (direction == "west"){
+        else if (direction == "left"){
             this.x -= 1;
         }
         else if (direction == "up"){
