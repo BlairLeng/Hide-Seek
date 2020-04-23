@@ -52,6 +52,11 @@ public class gridData: basic
     }
 
     private void checkAccessbility(){
+        //左上角为(0,0)点
+        //  0,0  1,0  2,0 ...
+        //  0,1  1,1  2,1 ...
+        //  0,2  1,2  2,2 ...
+        //  ...  ...  ...
         //四角
         if (this.x == this.map_width && this.y == this.map_height){
             this.accessible_directions.Add("left");
@@ -90,6 +95,7 @@ public class gridData: basic
             this.accessible_directions.Add("up");
             this.accessible_directions.Add("down");
         }
+        //常规
         else{
             this.accessible_directions.Add("right");
             this.accessible_directions.Add("left");

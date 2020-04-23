@@ -33,6 +33,13 @@ public class map: MonoBehaviour
                 this.grids.Add(empty);
             }
         }
+        this.addRunners(3,3);
+    }
+
+    public void addRunners(int x, int y){
+        gridData runner = new gridData(x,y,2,0,this.width,this.height);
+        int pos = x + y * this.width;
+        this.grids[pos] = runner;
     }
 
     public void addWalls()

@@ -17,7 +17,7 @@
         {
             MyClass get_grid = JsonUtility.FromJson<MyClass>(msg);
 
-            Debug.Log(msg);
+            // Debug.Log(msg);
             //Debug.Log("x is "+get_grid.grids[0].x);
             //Debug.Log("y is "+get_grid.grids[0].y);
             //Debug.Log("type is "+ get_grid.grids[0].type);
