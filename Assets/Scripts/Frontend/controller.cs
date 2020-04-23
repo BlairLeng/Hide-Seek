@@ -18,6 +18,7 @@ namespace Test{
             json = JsonUtility.ToJson(map);
             // map.runnerMove(0,"left");
             Debug.Log(json);
+            view.receiver(json);
         }
 
         void Update()
