@@ -42,7 +42,7 @@
                 gm.SpawnTile(get_grid.grids[i].x, Mathf.Abs(rev - get_grid.grids[i].y), get_grid.grids[i].type, rev);
             }
 
-            //gm.Deletespawn();
+            gm.Deletespawn();
 
                 //Debug.Log(msg[0]);
             return;

@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Frontend/GridManger.cs">
     <Files>
       <File FileName="Assets/Scripts/Frontend/controller.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/Frontend/GridManger.cs" Line="64" Column="10" />
-      <File FileName="Assets/Scripts/Frontend/view.cs" />
+      <File FileName="Assets/Scripts/Frontend/GridManger.cs" Line="69" Column="34" />
+      <File FileName="Assets/Scripts/Frontend/view.cs" Line="45" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
