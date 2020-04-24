@@ -8,10 +8,11 @@ public class GridManger : MonoBehaviour
     // create temp_gameobject list
     // List<>...
 
-
+    public List<GameObject> pool1 = new List<GameObject>();
     public Sprite sprite;
     public int[,] Grid;
     int Vertical, Horizontal, Columns, Rows;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +50,7 @@ public class GridManger : MonoBehaviour
         GameObject g = new GameObject("X" + x+ "Y"+(Height - y));
         g.transform.position = new Vector3(x-(Horizontal - 0.5f),y-(Vertical - 0.5f));
         var s = g.AddComponent<SpriteRenderer>(); 
-        Debug.Log("sprite should be "+ sp);
+       // Debug.Log("sprite should be "+ sp);
         s.sprite = sp;
         if (Value == 0)
         {
@@ -63,11 +64,19 @@ public class GridManger : MonoBehaviour
         {
             s.color = new Color(0.0f, 0.0f, 1.0f);
         }
+        Debug.Log("object g shouldd be" + g);
+        Debug.Log("pool count should be" + pool1.Count);
+        pool1.Add(g);
 
+        Debug.Log("what's in the pool" + pool1);
     }
 
-    public void spawnentire()
+    public void Deletespawn()
     {
-        return;
+        for (int i = 0; i < pool1.Count; i++)
+        {
+            Destroy(pool1[i]);
+        }
+            return;
     }
 }
