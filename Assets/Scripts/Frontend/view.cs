@@ -8,13 +8,23 @@
     
 
     public class view
-    {
-        
-
+    {    
+        public double timer = 0.0;
+        public int frames = 24;//1/24s
+        public Queue<string> storedInformation = new Queue<string>();
+        // play system
+        // every xxx ms play one frame 
+        // time.deltaTime...?
+        // Queue<String> storeInformation ...
+        // incoming msg stores into queue 
+        // play based on setting frames / second 
 
         GameObject g = new GameObject();
         public static void receiver(string msg)
         {
+
+            // storedInformation.add(msg)
+
             MyClass get_grid = JsonUtility.FromJson<MyClass>(msg);
 
             // Debug.Log(msg);
@@ -24,25 +34,26 @@
 
             GameObject gmob = new GameObject();
             GridManger gm = gmob.AddComponent<GridManger>();
-            //gm.SpawnTile(get_grid.grids[0].x, get_grid.grids[0].y, get_grid.grids[0].type);
+            gm.SpawnTile(get_grid.grids[0].x, get_grid.grids[0].y, get_grid.grids[0].type);
             int len = get_grid.width * get_grid.height;
-            int rev = get_grid.height - 1;
+            Random random = new Random();
             int rd = Random.Range(0,2);
             for (int i = 0; i < len; i++)
             {
-                Debug.Log("revese y value is"+Mathf.Abs(rev - i));
-                gm.SpawnTile(get_grid.grids[i].x, Mathf.Abs(rev - get_grid.grids[i].y), get_grid.grids[i].type, rev);
+                gm.SpawnTile(get_grid.grids[i].x, get_grid.grids[i].y, Random.Range(0, 2));
             }
 
 
 
                 //Debug.Log(msg[0]);
                 return;
-
-            
-        
-
         }
+
+        public void play(){
+            //time.deltatime...
+            return;
+        }
+
 
         [System.Serializable]
         public class MyClass

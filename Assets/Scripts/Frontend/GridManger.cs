@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GridManger : MonoBehaviour
 {
+
+    // create temp_gameobject list
+    // List<>...
+
+
     public Sprite sprite;
     public int[,] Grid;
     int Vertical, Horizontal, Columns, Rows;
@@ -36,6 +41,9 @@ public class GridManger : MonoBehaviour
     // get x y and spwan the tile
     public void SpawnTile(int x,int y,int Value,int Height)
     {
+        // every time you spawn, store it into temp list
+
+
         //Sprite sp = Resources.Load<Sprite>("Sprites/Square");
         Sprite sp = Resources.Load<Sprite>("Sprites/ppp");
         GameObject g = new GameObject("X" + x+ "Y"+(Height - y));
