@@ -12,7 +12,8 @@ namespace Test{
 
         public bool send = true;
         map map = new map(10,10);
-        RL rl = new RL();
+        runnerRL runnerRL = new runnerRL();
+        chaserRL chaserRL = new chaserRL();
         bool stop = false;
         void Start(){
             json = JsonUtility.ToJson(map);
@@ -23,17 +24,23 @@ namespace Test{
 
         void Update()
         {
-            
             map.read();
-            rl.read();
-            string order = rl.order();
-            if (order == "left" && !stop){
+            runnerRL.read();
+            chaserRL.read();
+            string runner_order = runnerRL.order();
+            string chaser_order = chaserRL.order();
+            if (runner_order == "left"){
                 map.runnerMove(0,"left");
                 json = JsonUtility.ToJson(map);
                 view.receiver(json);
                 Debug.Log(json);
             }
-            stop = true;
+            if (chaser_order == "left"){
+                map.chaserMove(0,"left");
+                json = JsonUtility.ToJson(map);
+                view.receiver(json);
+                Debug.Log(json);
+            }
         }
     }
 }

@@ -26,17 +26,17 @@ public class gridData: basic
         }
     }
 
-    public void c_move(string direction){
+    public void move(string direction){
         // 可以设置是否可以移动的判断条件
         // 如果是runner或者chaser允许移动
         int isEmpty = this.accessible_directions.Count;
         if ((type == 2 || type == 3) && isEmpty != 0 && this.accessible_directions.Contains(direction)){
-            move(direction);
+            r_move(direction);
         }
         return;
     }
 
-    private void move(string direction){
+    private void r_move(string direction){
         if (direction == "right"){
             this.x += 1;
         }
@@ -103,4 +103,37 @@ public class gridData: basic
             this.accessible_directions.Add("down");
         }
     }
+
+    public void die(){
+        return;
+    }
+
+    public void kill(){
+        return;
+    }
+
+    public int pseudoMove(string direction){
+        int isEmpty = this.accessible_directions.Count;
+        if ((type == 2 || type == 3) && isEmpty != 0 && this.accessible_directions.Contains(direction)){
+            return pseudo_r_move(direction);
+        }
+        return -1;
+    }
+
+    private int pseudo_r_move(string direction){
+        if (direction == "right"){
+            return this.y * this.map_width + (this.x+1);
+        }
+        else if (direction == "left"){
+            return this.y * this.map_width + (this.x-1);
+        }
+        else if (direction == "up"){
+            return (this.y-1) * this.map_width + this.x;
+        }
+        else if (direction == "down"){
+            return (this.y+1) * this.map_width + this.x;
+        }
+        return -1;
+    }
+
 }
