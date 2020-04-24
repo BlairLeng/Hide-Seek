@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class runnerRL
 {
+    public int limit = 8;
+    public int counter = 0;
     public runnerRL(){
         return;
     }
@@ -12,6 +14,9 @@ public class runnerRL
 
     public string order(){
         //根据RL目前的信息，来判断要做什么
-        return "left";
+        if (counter++ < limit){
+            return "left";
+        }
+        return "";
     }
 }
