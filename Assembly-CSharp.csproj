@@ -71,10 +71,13 @@
     <Compile Include="Assets\Scripts\Frontend\GridManger.cs" />
     <Compile Include="Assets\Scripts\Frontend\controller.cs" />
     <Compile Include="Assets\Scripts\Frontend\view.cs" />
+    <Compile Include="Assets\Scripts\newBack\RL.cs" />
     <Compile Include="Assets\Scripts\newBack\basic.cs" />
+    <Compile Include="Assets\Scripts\newBack\chaserRL.cs" />
     <Compile Include="Assets\Scripts\newBack\gridData.cs" />
     <Compile Include="Assets\Scripts\newBack\map.cs" />
     <Compile Include="Assets\Scripts\newBack\runner.cs" />
+    <Compile Include="Assets\Scripts\newBack\runnerRL.cs" />
     <Compile Include="Assets\Scripts\newBack\wall.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/xiaoxingan/Desktop/Hide-Seek/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

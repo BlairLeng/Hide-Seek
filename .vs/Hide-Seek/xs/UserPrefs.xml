@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{3D2612B6-3FCA-8556-9861-984C1DAD7F8C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Frontend/view.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Frontend/controller.cs">
     <Files>
-      <File FileName="Assets/Scripts/Frontend/controller.cs" Line="5" Column="1" />
-      <File FileName="Assets/Scripts/Frontend/GridManger.cs" Line="16" Column="34" />
-      <File FileName="Assets/Scripts/newBack/map.cs" Line="15" Column="32" />
-      <File FileName="Assets/Scripts/Frontend/view.cs" Line="44" Column="35" />
+      <File FileName="Assets/Scripts/Frontend/controller.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/Frontend/GridManger.cs" Line="69" Column="46" />
+      <File FileName="Assets/Scripts/Frontend/view.cs" Line="41" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,21 +12,19 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Frontend" expanded="True">
-                  <Node name="view.cs" selected="True" />
+                  <Node name="controller.cs" selected="True" />
                 </Node>
+                <Node name="newBack" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0a44cc74-8633-4944-853b-7d576e1d5c99" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8531a9ec-30ca-43c4-896d-68aaf670226b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

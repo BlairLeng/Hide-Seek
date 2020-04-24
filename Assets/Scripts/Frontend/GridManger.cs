@@ -64,6 +64,11 @@ public class GridManger : MonoBehaviour
         {
             s.color = new Color(0.0f, 0.0f, 1.0f);
         }
+        else if (Value == 3)
+        {
+            s.color = new Color(1.0f, 0.0f, 0.0f);
+        }
+
         //Debug.Log("object g shouldd be" + g);
         //Debug.Log("pool count should be" + pool1.Count);
         pool1.Add(g);

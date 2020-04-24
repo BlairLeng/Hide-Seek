@@ -27,7 +27,7 @@
 
             MyClass get_grid = JsonUtility.FromJson<MyClass>(msg);
 
-            // Debug.Log(msg);
+            //Debug.Log(msg);
             //Debug.Log("x is "+get_grid.grids[0].x);
             //Debug.Log("y is "+get_grid.grids[0].y);
             //Debug.Log("type is "+ get_grid.grids[0].type);
@@ -38,6 +38,7 @@
             int rev = get_grid.height - 1;
             for (int i = 0; i < len; i++)
             {
+                Debug.Log(get_grid.grids[i].x);
                 gm.SpawnTile(get_grid.grids[i].x, Mathf.Abs(rev - get_grid.grids[i].y), get_grid.grids[i].type, rev);
             }
 
