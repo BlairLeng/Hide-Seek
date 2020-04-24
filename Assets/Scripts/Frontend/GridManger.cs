@@ -44,12 +44,12 @@ public class GridManger : MonoBehaviour
         // every time you spawn, store it into temp list
 
 
-        //Sprite sp = Resources.Load<Sprite>("Sprites/Square");
-        Sprite sp = Resources.Load<Sprite>("Sprites/ppp");
+        Sprite sp = Resources.Load<Sprite>("Sprites/Square");
+        //Sprite sp = Resources.Load<Sprite>("Sprites/ppp");
         GameObject g = new GameObject("X" + x+ "Y"+(Height - y));
         g.transform.position = new Vector3(x-(Horizontal - 0.5f),y-(Vertical - 0.5f));
         var s = g.AddComponent<SpriteRenderer>(); 
-        //Debug.Log("sprite should be "+ sp);
+        Debug.Log("sprite should be "+ sp);
         s.sprite = sp;
         if (Value == 0)
         {
