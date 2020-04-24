@@ -36,8 +36,8 @@ public class map: MonoBehaviour
                 this.grids.Add(empty);
             }
         }
-        this.addRunners(10,0);
-        this.addChaser(10,1);
+        this.addRunners(9,0);
+        this.addChaser(9,1);
     }
 
     public void addRunners(int x, int y){
