@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\newBack\runner.cs" />
     <Compile Include="Assets\Scripts\newBack\runnerRL.cs" />
     <Compile Include="Assets\Scripts\newBack\wall.cs" />
+    <None Include="Assets\Resources\Spritesheet\spritesheetInfo.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/xiaoxingan/Desktop/Hide-Seek/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
